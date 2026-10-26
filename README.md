@@ -17,8 +17,9 @@
 > **⚠️ PROTOTYPE REPOSITORY NOTICE**
 >
 > - **Prototype Only:** This repository represents **strictly the experimental prototype and proof-of-concept (PoC)** for YatraGuard.
+> - **Single City Focus:** This prototype is **currently built for only one city for now — Bangalore (Bengaluru)**.
 > - **Not Deployed:** This prototype is **not deployed to production**; it is designed for local simulation, UI validation, and safety scoring engine demonstrations.
-> - **Main Project in Development:** The comprehensive, full-scale production application is **being built separately in another repository**.
+> - **Main Project in Development:** The comprehensive, full-scale production application with live backend integration and multi-city scale is **being built separately in another repository**.
 
 ---
 
@@ -58,11 +59,9 @@ Instead of forcing a single path, YatraGuard generates three distinct routing al
 
 ### 3. 🗺️ Geospatial Safety Heatmap with Tap-to-Score IDW
 
-- **Interactive Multi-City Heatmap:** Interactive Leaflet GIS visualization featuring colored danger, caution, and safe buffer zones with OKLCH pulsing glow halos.
-- **Arbitrary Coordinate Scoring (Inverse Distance Weighting):** Tap **anywhere** on the city map to instantly calculate an interpolated local safety score ($1\text{--}100$) using spatial decay over surrounding known risk zones within a $3\text{ km}$ radius.
-- **Tier-1 and Tier-2 Indian City Coverage:**
-  - **Tier-1:** Bengaluru (BLR), Hyderabad (HYD), Delhi NCR (DEL)
-  - **Tier-2:** Jaipur (JAI), Lucknow (LKO), Indore (IND), Kochi (KCH), Chandigarh (CHD), Bhubaneswar (BBI)
+- **Single City Pilot (Bangalore):** The prototype is **currently built for only one city for now — Bangalore (Bengaluru)**, with simulated safety corridors and hotspots across Indiranagar, MG Road, Koramangala, Cubbon Park, KR Market, HSR Layout, and Hebbal.
+- **Arbitrary Coordinate Scoring (Inverse Distance Weighting):** Tap **anywhere** on the Bangalore city map to instantly calculate an interpolated local safety score ($1\text{--}100$) using spatial decay over surrounding known risk zones within a $3\text{ km}$ radius.
+- **Future Multi-City Roadmap:** Multi-city coverage across Tier-1 and Tier-2 hubs (Hyderabad, Delhi NCR, Jaipur, Lucknow, Indore, Kochi, etc.) is planned for the full-scale main project.
 
 ### 4. 📍 Landmark-First Search Architecture
 
@@ -385,13 +384,17 @@ Developed with dedication by **Syntax Squad**
 
 ---
 
-## 📄 License
+## 📄 License & Intellectual Property
 
-This project is licensed under the **MIT License**. Feel free to use, modify, and distribute this codebase for research, civic tech, and educational purposes.
+This project is open-source under the **[MIT License](file:///c:/Users/basum/Downloads/yatra-safe-routes-main/LICENSE.md)**.  
+Copyright © 2026 **ANANDVERSE TECHNOLOGIES** & **Syntax Squad**.
+
+- **Udyam Registration Number:** `UDYAM-AP-08-0125162` (Ministry of MSME, Govt. of India)
+- **Project Presentation & Pitch Deck:** [YatraGuard Design on Canva](https://www.canva.com/design/DAHXWC_E-oo/kxSySbdAla6e5oW_Zu5Ujg/edit)
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by <b>Syntax Squad</b> (SVEC - Sree Vidyanikethan Engineering College, Tirupati) for safer Indian streets and confident commuter journeys.</sub><br>
+  <sub>Built with ❤️ by <b>Syntax Squad</b> (SVEC - Sree Vidyanikethan Engineering College, Tirupati) & <b>ANANDVERSE TECHNOLOGIES</b>.</sub><br>
   <sub><b>YatraGuard</b> — Safe navigation, community resilience, and rapid emergency response.</sub>
 </div>
