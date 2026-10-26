@@ -1,0 +1,232 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-safe: var(--safe);
+  --color-safe-foreground: var(--safe-foreground);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.18 0.02 250);
+  --foreground: oklch(0.97 0.01 250);
+  --card: oklch(0.22 0.025 250);
+  --card-foreground: oklch(0.97 0.01 250);
+  --popover: oklch(0.22 0.025 250);
+  --popover-foreground: oklch(0.97 0.01 250);
+  --primary: oklch(0.78 0.18 155);
+  --primary-foreground: oklch(0.18 0.04 160);
+  --secondary: oklch(0.28 0.03 250);
+  --secondary-foreground: oklch(0.97 0.01 250);
+  --muted: oklch(0.26 0.025 250);
+  --muted-foreground: oklch(0.72 0.02 250);
+  --accent: oklch(0.32 0.04 250);
+  --accent-foreground: oklch(0.97 0.01 250);
+  --destructive: oklch(0.65 0.24 25);
+  --destructive-foreground: oklch(0.98 0.01 25);
+  --border: oklch(0.3 0.02 250);
+  --input: oklch(0.3 0.02 250);
+  --ring: oklch(0.78 0.18 155);
+
+  --safe: oklch(0.78 0.18 155);
+  --safe-foreground: oklch(0.18 0.04 160);
+  --warning: oklch(0.82 0.17 75);
+  --danger: oklch(0.65 0.24 25);
+  --info: oklch(0.75 0.15 230);
+
+  --gradient-safe: linear-gradient(135deg, oklch(0.78 0.18 155), oklch(0.7 0.16 175));
+  --gradient-danger: linear-gradient(135deg, oklch(0.65 0.24 25), oklch(0.7 0.2 45));
+  --gradient-bg: radial-gradient(ellipse at top, oklch(0.24 0.04 255), oklch(0.16 0.02 250));
+  --shadow-glow-safe: 0 0 24px oklch(0.78 0.18 155 / 0.45), 0 0 60px oklch(0.78 0.18 155 / 0.18);
+  --shadow-glow-danger: 0 0 24px oklch(0.65 0.24 25 / 0.5);
+  --shadow-elevated: 0 12px 40px -12px oklch(0 0 0 / 0.6);
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { color-scheme: dark; }
+  body {
+    background: var(--gradient-bg);
+    background-attachment: fixed;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01", "ss03";
+    letter-spacing: -0.005em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .glow-safe { box-shadow: var(--shadow-glow-safe); }
+  .glow-danger { box-shadow: var(--shadow-glow-danger); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .text-safe { color: var(--safe); }
+  .text-danger { color: var(--danger); }
+  .text-warning { color: var(--warning); }
+  .text-info { color: var(--info); }
+  .bg-safe { background-color: var(--safe); }
+  .bg-danger { background-color: var(--danger); }
+  .bg-warning { background-color: var(--warning); }
+  .bg-info { background-color: var(--info); }
+  .gradient-safe { background: var(--gradient-safe); }
+  .gradient-danger { background: var(--gradient-danger); }
+
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 oklch(0.65 0.24 25 / 0.65); }
+    70% { box-shadow: 0 0 0 22px oklch(0.65 0.24 25 / 0); }
+    100% { box-shadow: 0 0 0 0 oklch(0.65 0.24 25 / 0); }
+  }
+  .animate-sos { animation: pulse-ring 1.6s infinite; }
+
+  /* SOS halo — layered breathing rings */
+  @keyframes sos-halo {
+    0%   { box-shadow: 0 0 0 0 oklch(0.65 0.24 25 / 0.55), 0 0 0 0 oklch(0.65 0.24 25 / 0.35); }
+    60%  { box-shadow: 0 0 0 18px oklch(0.65 0.24 25 / 0), 0 0 0 36px oklch(0.65 0.24 25 / 0); }
+    100% { box-shadow: 0 0 0 0 oklch(0.65 0.24 25 / 0), 0 0 0 0 oklch(0.65 0.24 25 / 0); }
+  }
+  .animate-sos-halo { animation: sos-halo 1.8s cubic-bezier(.4,0,.2,1) infinite; }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+  }
+  .animate-pulse-soft { animation: pulse-soft 2.4s ease-in-out infinite; }
+
+  /* Route glowing flow — animated dashes + drop-shadow */
+  @keyframes dash-flow { to { stroke-dashoffset: -40; } }
+  .route-flow {
+    stroke-dasharray: 8 12;
+    animation: dash-flow 1.2s linear infinite;
+    filter: drop-shadow(0 0 6px oklch(0.78 0.18 155 / 0.85))
+            drop-shadow(0 0 14px oklch(0.78 0.18 155 / 0.4));
+  }
+
+  /* Fade & slide entrances */
+  @keyframes yg-fade-in-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up { animation: yg-fade-in-up 0.45s cubic-bezier(.2,.8,.2,1) both; }
+
+  @keyframes yg-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .animate-fade-in { animation: yg-fade-in 0.4s ease-out both; }
+
+  @keyframes yg-scale-in {
+    from { opacity: 0; transform: scale(0.96); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  .animate-scale-in { animation: yg-scale-in 0.35s cubic-bezier(.2,.8,.2,1) both; }
+
+  /* Shimmer (premium accents on hero score, etc.) */
+  @keyframes yg-shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--foreground) 0%,
+      var(--foreground) 35%,
+      oklch(0.95 0.08 155) 50%,
+      var(--foreground) 65%,
+      var(--foreground) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: yg-shimmer 3.6s linear infinite;
+  }
+
+  /* Subtle hover lift used across cards */
+  .hover-lift { transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s; }
+  .hover-lift:hover { transform: translateY(-2px); box-shadow: var(--shadow-elevated); }
+
+  .glass {
+    background: color-mix(in oklab, var(--card) 75%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  /* Display number style (hero scores) */
+  .num-display {
+    font-family: var(--font-display);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.04em;
+  }
+}
+
+.leaflet-container {
+  background: oklch(0.16 0.02 250) !important;
+  font-family: inherit;
+  outline: none;
+}
+.leaflet-tile {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.95) saturate(0.6);
+}
+.leaflet-control-attribution { display: none !important; }
+.leaflet-control-zoom { display: none !important; }
+
+@keyframes yg-zone-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0; transform: scale(1.25); }
+}
+.yg-pulse-zone {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: yg-zone-pulse 2.4s ease-in-out infinite;
+}
+
+/* Heatmap circles fade in smoothly when (re)rendered */
+@keyframes yg-zone-fade-in {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.leaflet-interactive {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: yg-zone-fade-in 0.55s cubic-bezier(.2,.8,.2,1) both;
+  transition: stroke-width .25s ease, opacity .25s ease;
+}
+.leaflet-interactive:hover { stroke-width: 3; }
