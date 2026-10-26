@@ -365,7 +365,8 @@ Open [http://localhost:3000](http://localhost:3000) (or the port displayed in yo
 
 ## 👥 Team — Syntax Squad
 
-Developed with dedication by **Syntax Squad**:
+Developed with dedication by **Syntax Squad**  
+🏫 **Institution:** SVEC - Sree Vidyanikethan Engineering College, Tirupati
 
 | Role            | Name           |
 | :-------------- | :------------- |
@@ -391,6 +392,6 @@ This project is licensed under the **MIT License**. Feel free to use, modify, an
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by <b>Syntax Squad</b> for safer Indian streets and confident commuter journeys.</sub><br>
+  <sub>Built with ❤️ by <b>Syntax Squad</b> (SVEC - Sree Vidyanikethan Engineering College, Tirupati) for safer Indian streets and confident commuter journeys.</sub><br>
   <sub><b>YatraGuard</b> — Safe navigation, community resilience, and rapid emergency response.</sub>
 </div>
