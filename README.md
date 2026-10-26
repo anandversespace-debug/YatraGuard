@@ -390,7 +390,6 @@ This project is open-source under the **[MIT License](file:///c:/Users/basum/Dow
 Copyright © 2026 **ANANDVERSE TECHNOLOGIES** & **Syntax Squad**.
 
 - **Udyam Registration Number:** `UDYAM-AP-08-0125162` (Ministry of MSME, Govt. of India)
-- **Project Presentation & Pitch Deck:** [YatraGuard Design on Canva](https://www.canva.com/design/DAHXWC_E-oo/kxSySbdAla6e5oW_Zu5Ujg/edit)
 
 ---
 
