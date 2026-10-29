@@ -367,13 +367,14 @@ Open [http://localhost:3000](http://localhost:3000) (or the port displayed in yo
 Developed with dedication by **Syntax Squad**  
 🏫 **Institution:** SVEC - Sree Vidyanikethan Engineering College, Tirupati
 
-| Role            | Name           |
-| :-------------- | :------------- |
-| **Team Lead**   | **Anand Babu** |
-| **Team Member** | Hemanth        |
-| **Team Member** | Veni Kaustubha |
-| **Team Member** | Joshik         |
-| **Team Member** | Venkatesh Naik |
+
+| Role            | Name                              | 
+| :-------------- | :-------------------------------- | 
+| **Team Lead**   | **B.Anand Babu**                  | 
+| **Team Member** | D.Hemanth Venkata Sai Kumar       | 
+| **Team Member** | K.Veni Kaustubha                  | 
+| **Team Member** | C.Joshik Chowdary                 | 
+| **Team Member** | D.Venkatesh Naik                  | 
 
 ---
 
