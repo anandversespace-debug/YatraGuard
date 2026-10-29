@@ -29,14 +29,30 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "YatraGuard (यात्रा गार्ड) — Safe Navigation & Emergency Response" },
+      {
+        name: "description",
+        content:
+          "YatraGuard — Intelligent safety-centric urban navigation & emergency response system for Indian cities. Multi-factor route safety scoring, hazard heatmaps, zero-asset offline SOS siren, and crowd hazard reporting.",
+      },
+      { name: "author", content: "Syntax Squad & ANANDVERSE TECHNOLOGIES" },
+      { property: "og:title", content: "YatraGuard (यात्रा गार्ड) — Safest Route, Every Time" },
+      {
+        property: "og:description",
+        content:
+          "Context-aware urban safety navigation built for Indian cities. Multi-factor safety scoring (1–100), spatial risk heatmaps, offline emergency SOS siren, and community hazard verification.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:site_name", content: "YatraGuard" },
+      { property: "og:url", content: "https://yatraguard.anandverse.tech" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "YatraGuard (यात्रा गार्ड) — Safest Route, Every Time" },
+      {
+        name: "twitter:description",
+        content:
+          "Intelligent safety-centric urban navigation & emergency response system built for Indian cities.",
+      },
+      { name: "theme-color", content: "#0df2a0" },
     ],
     links: [
       {

@@ -14,8 +14,18 @@ import { track } from "@/lib/analytics-store";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "YatraGuard — Safest route, every time" },
-      { name: "description", content: "Real-time safety navigation for India. Safer routes, live risk alerts and one-tap SOS." },
+      { title: "YatraGuard (यात्रा गार्ड) — Safest route, every time" },
+      {
+        name: "description",
+        content:
+          "Real-time safety navigation for India. Multi-factor safety route scoring, live hazard heatmaps, zero-asset emergency SOS siren, and community hazard reports.",
+      },
+      { property: "og:title", content: "YatraGuard (यात्रा गार्ड) — Safest route, every time" },
+      {
+        property: "og:description",
+        content:
+          "Real-time safety navigation for India. Multi-factor safety route scoring, live hazard heatmaps, zero-asset emergency SOS siren, and community hazard reports.",
+      },
     ],
   }),
   component: HomePage,
